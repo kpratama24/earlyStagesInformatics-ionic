@@ -11,7 +11,6 @@ import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
 @NgModule({
   declarations: [
     MyApp,
-
   News, Fixtures, Rugby101, RugbyClubs, TeamPhotos
   ],
   imports: [
@@ -20,7 +19,6 @@ import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-<<<<<<< HEAD
 
       News, Fixtures, Rugby101, RugbyClubs, TeamPhotos
   ],
