@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 import { News } from '../pages/News/news';
 import { Fixtures } from '../pages/Fixtures/fixtures';
 import { Rugby101 } from '../pages/Rugby101/rugby101';
@@ -10,6 +11,7 @@ import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
 @NgModule({
   declarations: [
     MyApp,
+
   News, Fixtures, Rugby101, RugbyClubs, TeamPhotos
   ],
   imports: [
@@ -18,6 +20,7 @@ import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+<<<<<<< HEAD
 
       News, Fixtures, Rugby101, RugbyClubs, TeamPhotos
   ],
