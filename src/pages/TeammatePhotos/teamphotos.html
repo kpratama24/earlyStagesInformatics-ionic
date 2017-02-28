@@ -19,7 +19,7 @@
 <ion-content padding>
   <h3 text-center>Teammate Photos</h3>
   <div>
-    <button ion-button block icon-left><ion-icon name="camera" style="margin-left:0px !important;"></ion-icon><div>Take a Photo</div></button>
+    <button ion-button block icon-left (click)="takePhotos()"><ion-icon name="camera" style="margin-left:0px !important;"></ion-icon><div>Take a Photo</div></button>
     <button ion-button block icon-left><ion-icon name="grid" left></ion-icon><div>Load from Library</div></button>
   </div>
   <div>
