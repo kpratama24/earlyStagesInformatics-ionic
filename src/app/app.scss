@@ -14,8 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.green{
-  background-color: #003300 !important;
+.red{
+  background-color: red !important;
   color: #ffffff;
 
+}
+.icons{
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+}
+.container{
+  width: 100%;
+  display: block;
+}
+.menu-item{
+  background-color: transparent !important;
+  color: white !important;
 }
