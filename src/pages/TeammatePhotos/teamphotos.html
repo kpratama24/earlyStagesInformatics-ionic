@@ -1,5 +1,6 @@
 <ion-header>
   <ion-navbar>
+
     <ion-buttons start left>
       <a ng-href="news">
         <button ion-button>
@@ -7,61 +8,69 @@
         </button>
       </a>
     </ion-buttons>
-    <div>
-      <img class="logo" src="../../assets/img/logo-unpar.png">
+    <div class="logo-container">
+      <img class="logo " src="../../assets/img/logo_rugby.png">
     </div>
+
     <button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3 text-center>Teammate Photos</h3>
-  <div>
-    <button ion-button block icon-left><ion-icon name="camera" style="margin-left:0px !important;"></ion-icon><div>Take a Photo</div></button>
-    <button ion-button block icon-left><ion-icon name="grid" left></ion-icon><div>Load from Library</div></button>
-  </div>
-  <div>
-    <ion-grid>
-      <ion-row>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-        <ion-col width-50>
-          <ion-card>
-            <img src="../../assets/img/img1.jpg">
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-content >
 
+  <div class="card-background-page">
+    <ion-card>
+      <img src="../../assets/img/Slider-2.jpg">
+      <div class="card-title">Teammate Photos</div>
+    </ion-card>
   </div>
+  <div padding>
+    <div>
+      <button ion-button block icon-left (click)="takePhotos()"><ion-icon name="camera" style="margin-left:0px !important;"></ion-icon><div>Take a Photo</div></button>
+      <button ion-button block icon-left><ion-icon name="grid" left></ion-icon><div>Load from Library</div></button>
+    </div>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+          <ion-col width-50>
+            <ion-card>
+              <img src="../../assets/img/img1.jpg">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
+    </div>
+  </div>
 </ion-content>

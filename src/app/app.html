@@ -1,29 +1,57 @@
 <ion-menu side="right" [content]="content">
-  <ion-header class="green">
+  <ion-header class="red">
     <ion-toolbar>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content padding class="green">
+  <ion-content padding class="red">
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button class="menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
     <div>
-      <p>Contact<br> info@rugbyindonesia.or.id
-        <br> www.rugbyindonesia.or.id
-      </p>
-      <p>Connect with us:<br>
-      </p>
-      <p>Affiliations<br>
+      <div class="container">
+        <p>Contact<br> info@rugbyindonesia.or.id
+          <br> www.rugbyindonesia.or.id
+        </p>
+      </div>
+      <div class="container">
+        <p>Connect with us:<br>
+        </p>
+      </div>
+      <div class="container">
+        <img class="icons" src="../../assets/img/SM-Twitter.png">
+        <img class="icons" src="../../assets/img/SM-Facebook.png">
+        <img class="icons" src="../../assets/img/SM-Vine.png">
+        <img class="icons" src="../../assets/img/SM-Google-Plus.png">
+        <img class="icons" src="../../assets/img/SM-Youtube.png">
+        <img class="icons" src="../../assets/img/SM-Instagram.png">
+      </div>
+      <div class="container">
+        <p>Affiliations<br>
+        </p>
+      </div>
 
-      </p>
-      <p>&#169; 2017 Persatuan Rugby Union Indonesia</p>
-      <p>Powered By:<br>
-      </p>
-      <p>Developed By<br> DNArtworks.co.id</p>
+      <div class="container">
+        <img class="icons" src="../../assets/img/WorldRugby.png">
+        <img class="icons" src="../../assets/img/ARFU2.png">
+        <img class="icons" src="../../assets/img/KOI.png">
+        <img class="icons" src="../../assets/img/KONI.png">
+      </div>
+
+      <div class="container">
+        <p>&#169; 2017 Persatuan Rugby Union Indonesia</p>
+      </div><br>
+      <div class="container">
+        <p>Powered By:<br>
+        </p>
+      </div>
+      <br>
+      <div class="container">
+        <p>Developed By<br> DNArtworks.co.id</p>
+      </div>
     </div>
   </ion-content>
 
