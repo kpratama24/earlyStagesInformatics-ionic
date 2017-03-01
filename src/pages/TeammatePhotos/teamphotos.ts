@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import {Camera} from 'ionic-native';
-import { NavController } from 'ionic-angular';
 
+<<<<<<< HEAD
+=======
+import { NavController } from 'ionic-angular';
+import {Camera} from 'ionic-native';
+
+>>>>>>> a4dd0ef496de413d8a8ca24504f0323c3ce7c176
 @Component({
   selector: 'page-teamphotos',
   templateUrl: 'teamphotos.html'
