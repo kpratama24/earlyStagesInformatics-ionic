@@ -8,7 +8,7 @@ Early Stages React Native Project.
 
 Development Framework : **Ionic v2.0.1 BUILD 2017-02-08**
 
-Framework Plugin : **To be decided**
+Framework Plugin : **Ionic Native**
 
 Mobile Environment Support : **Android**,**iOS**, ~~Windows Phone~~
 
