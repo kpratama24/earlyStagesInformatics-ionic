@@ -2,9 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-
+import { News } from '../pages/News/news';
+import { Fixtures } from '../pages/Fixtures/fixtures';
+import { Rugby101 } from '../pages/Rugby101/rugby101';
+import { RugbyClubs } from '../pages/RugbyClubs/rugbyclubs';
+import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +14,7 @@ import { Page2 } from '../pages/page2/page2';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = News;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +23,14 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+
+
+      { title: 'News', component: News },
+      { title: 'Fixtures and Results', component: Fixtures },
+      { title: 'Rugby 101', component: Rugby101 },
+      { title: 'Rugby Clubs', component: RugbyClubs },
+      { title: 'Teammate Photos', component: TeamPhotos }
+
     ];
 
   }
