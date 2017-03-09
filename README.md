@@ -1,5 +1,6 @@
 # earlyStagesInformatics
-Early Stages React Native Project.
+Early Stages Angular & Ionic Project.
+[![Build Status](https://travis-ci.org/kpratama24/earlyStagesInformatics-ionic.svg?branch=travis)](https://travis-ci.org/kpratama24/earlyStagesInformatics-ionic)
 #### This is a Github Repository for collaborating with 2017's Informatics Project Lecture.
 
 ---
