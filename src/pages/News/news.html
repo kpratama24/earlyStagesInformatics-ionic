@@ -1,6 +1,5 @@
 <ion-header>
   <ion-navbar style="background: url('assets/img/back.png') !important;">
-
     <ion-buttons start left>
       <a ng-href="localhost:8100">
         <button ion-button>
@@ -32,7 +31,21 @@
 
 
   <div padding>
-    <ion-card>
+    <ion-card *ngFor="let item of newsInfo">
+      <img src = {{item.img}}>
+      <ion-card-content>
+        <ion-card-title>
+            {{item.title}}
+        </ion-card-title>
+      <p>
+        {{item.summary}}
+        <a href={{item.url}}><i>Read more...</i></a>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+    <!-- <ion-card>
 
       <img src="assets/img/img1.jpg">
 
@@ -68,5 +81,5 @@
       </ion-card-content>
 
     </ion-card>
-  </div>
+  </div> -->
 </ion-content>
