@@ -17,6 +17,7 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content>
   <div class="card-background-page">
     <ion-card>
@@ -24,11 +25,22 @@
       <div class="card-title">Rugby Clubs</div>
     </ion-card>
   </div>
-  <div padding>
-    <ion-grid>
-      <ion-row>
 
-        <ion-col width-33>
+  <div *ngFor = "let club of clubs">
+    <img src = {{club.img}}>
+    <h2>{{club.name}}</h2>
+    <h4>Location and Training :</h4>
+    <p>{{club.location_training}}</p>
+    <h4>{{club.contacts.name}}</h4>
+    <p>{{club.contacts.value}}</p>
+  </div>
+  <!-- <div padding>
+    <ion-grid>
+      <ion-row> -->
+
+
+
+        <!-- <ion-col width-33>
           <img class="img-size" src="assets/img/bali.png">
         </ion-col>
         <ion-col width-75>
@@ -134,5 +146,5 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </div> -->
 </ion-content>
