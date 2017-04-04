@@ -18,13 +18,22 @@
   </ion-navbar>
 </ion-header>
 
-<div padding>
-  <ion-card *ngFor="let fix of fixturesInfo">
-    <a href={{fix.url}}>
-        <img src = {{fix.img}}>
-    </a>
-</ion-card>
-</div>
+
+<ion-content>
+  <div class="card-background-page">
+    <ion-card>
+      <img src="assets/img/Slider-2.jpg">
+      <div class="card-title">Fixtures & Result</div>
+    </ion-card>
+  </div>
+  <div padding>
+    <ion-card *ngFor="let fix of fixturesInfo">
+      <a href={{fix.url}}>
+          <img src = {{fix.img}}>
+      </a>
+  </ion-card>
+  </div>
+</ion-content>
 
 <!-- <ion-content>
   <div class="card-background-page">
