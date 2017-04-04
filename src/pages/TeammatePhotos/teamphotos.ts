@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-
+import { Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import {Camera} from 'ionic-native';
-
+import 'rxjs/add/operator/map';
 @Component({
   selector: 'page-teamphotos',
   templateUrl: 'teamphotos.html'
 })
 export class TeamPhotos {
+public photos: any;
 
-  constructor(public navCtrl: NavController) {
-
-    }
+  constructor(public http: Http) {
+  this.http.get('https://ri-admin.azurewebsites.net/indonesianrugby/photos/list.json').subscribe(data =>
+      this.photos = data.json());
+      console.log(this.photos);
+  }
 
     public takePhotos(){
       Camera.getPicture().then((imageData) => {
