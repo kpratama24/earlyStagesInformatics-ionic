@@ -26,22 +26,34 @@
     </ion-card>
   </div>
 
-  <div padding *ngFor="let club of clubs">
+
+
+  <div padding>
     <ion-grid>
-      <ion-row>
+      <ion-row *ngFor="let club of clubs">
+
         <ion-col width-33>
+
           <img class="img-size" src={{club.img}}>
         </ion-col>
         <ion-col width-75>
           <h4 class="subtitles">{{club.name}}</h4>
-          <p>Location and Training :</p>
-          <p>{{club.location_training}}</p>
+          <p>
+            Location and Training:
+
+          </p>
+          <p *ngFor="let location of club.location_training">
+            {{location}}
+
+          </p>
+
+          <p>
+            {{club.contacts[0].name}} {{club.contacts[0].value}}
+          </p>
+
         </ion-col>
       </ion-row>
-      <h2></h2>
-
 
     </ion-grid>
   </div>
-
 </ion-content>

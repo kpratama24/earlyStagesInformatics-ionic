@@ -31,21 +31,21 @@
 
 
   <div padding>
-    <ion-card *ngFor="let item of newsInfo">
-      <img src = {{item.img}}>
+    <ion-card *ngFor="let news of newsInfo">
+      <img src={{news.img}}>
       <ion-card-content>
         <ion-card-title>
-            {{item.title}}
+          {{news.title}}
         </ion-card-title>
-      <p>
-        {{item.summary}}
-        <a href={{item.url}}><i>Read more...</i></a>
-      </p>
-    </ion-card-content>
-  </ion-card>
-</div>
+        <p>
+          {{news.summary}}
+          <a href={{news.url}}><i>Read more...</i></a>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
-    <!-- <ion-card>
+  <!-- <ion-card>
 
       <img src="assets/img/img1.jpg">
 
