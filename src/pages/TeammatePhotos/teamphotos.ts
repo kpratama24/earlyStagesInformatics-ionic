@@ -16,9 +16,7 @@ public nav:any;
       this.photos = data.json());
       console.log(this.photos);this.nav = navCtrl;
   }
-  navigate() {
-          this.nav.setRoot(News);
-      }
+
     public takePhotos(){
       Camera.getPicture().then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
@@ -28,4 +26,7 @@ public nav:any;
       // Handle error
       });
     }
+    navigate() {
+            this.nav.setRoot(News);
+        }
 }
