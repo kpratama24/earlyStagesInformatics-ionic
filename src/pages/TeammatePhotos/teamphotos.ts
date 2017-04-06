@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
-import {Camera} from 'ionic-native';
+import { Camera } from 'ionic-native';
 import 'rxjs/add/operator/map';
-import { News } from '../News/news'
 @Component({
   selector: 'page-teamphotos',
   templateUrl: 'teamphotos.html'
 })
 export class TeamPhotos {
 public photos: any;
-public nav:any;
-  constructor(public http: Http,public navCtrl: NavController) {
+public base64Images:any;
+  constructor(public navCtrl: NavController,public http: Http) {
   this.http.get('https://ri-admin.azurewebsites.net/indonesianrugby/photos/list.json').subscribe(data =>
       this.photos = data.json());
-      console.log(this.photos);this.nav = navCtrl;
+      console.log(this.photos);
   }
 
     public takePhotos(){
@@ -26,7 +25,14 @@ public nav:any;
       // Handle error
       });
     }
-    navigate() {
-            this.nav.setRoot(News);
-        }
-}
+    public loadLibrary(){
+    Camera.getPicture({
+        sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM,
+        destinationType: Camera.DestinationType.DATA_URL
+       }).then((imageData) => {
+         let base64Images = 'data:image/jpeg;base64,'+imageData;
+        }, (err) => {
+      //   console.log(err);
+       });
+     }
+    }

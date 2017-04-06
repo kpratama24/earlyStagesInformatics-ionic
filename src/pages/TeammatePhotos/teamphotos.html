@@ -29,13 +29,14 @@
   <div padding>
     <div>
       <button ion-button block icon-left (click)="takePhotos()"><ion-icon name="camera" style="margin-left:0px !important;"></ion-icon><div>Take a Photo</div></button>
-      <button ion-button block icon-left><ion-icon name="grid" left></ion-icon><div>Load from Library</div></button>
+      <button ion-button block icon-left (click)="loadLibrary()"><ion-icon name="grid" left></ion-icon><div>Load from Library</div></button>
     </div>
     <div>
       <ion-grid>
         <ion-row wrap>
           <ion-col *ngFor="let photo of photos?.data" width-50>
             <ion-card>
+              <!--  <img src="base64Images" *ngIf="base64Images"> -->
               <img src={{photo}}>
             </ion-card>
           </ion-col>
