@@ -7,6 +7,7 @@ import { Fixtures } from '../pages/Fixtures/fixtures';
 import { Rugby101 } from '../pages/Rugby101/rugby101';
 import { RugbyClubs } from '../pages/RugbyClubs/rugbyclubs';
 import { TeamPhotos } from '../pages/TeammatePhotos/teamphotos';
+import { FrameApplier } from '../pages/FrameApplier/frameapplier';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,6 +31,7 @@ export class MyApp {
       { title: 'Rugby 101', component: Rugby101 },
       { title: 'Rugby Clubs', component: RugbyClubs },
       { title: 'Teammate Photos', component: TeamPhotos }
+
 
     ];
 
