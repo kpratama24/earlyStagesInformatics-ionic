@@ -13,7 +13,7 @@ Framework Plugin : **Ionic Native**
 
 Mobile Environment Support : **Android**,**iOS**, ~~Windows Phone~~
 
-Development Status : **Alpha**
+Development Status : **Public Beta Release**
 
 ---
 ## **Project Groups**
