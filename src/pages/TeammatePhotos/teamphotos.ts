@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { NavController, ToastController, AlertController, LoadingController, Loading, Nav } from 'ionic-angular';
 import { Camera, File } from 'ionic-native';
 import { FrameApplier } from '../FrameApplier/frameapplier'
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 
 declare var cordova: any;
 @Component({

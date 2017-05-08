@@ -17,17 +17,14 @@ import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
-    MyApp,
-  News, Fixtures, Rugby101, RugbyClubs, TeamPhotos, FrameApplier
+    MyApp, News, Fixtures, Rugby101, RugbyClubs, TeamPhotos, FrameApplier
   ],
   imports: [
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-
-      News, Fixtures, Rugby101, RugbyClubs, TeamPhotos, FrameApplier
+    MyApp, News, Fixtures, Rugby101, RugbyClubs, TeamPhotos, FrameApplier
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

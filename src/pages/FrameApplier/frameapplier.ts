@@ -22,18 +22,21 @@ public htt:Http;
 public navi: any;
 public clubs : any;
 public base64Images: string;
-constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public nav: Nav) {
+constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public nav: Nav, public toastCtrl: ToastController) {
   this.http.get('https://ri-admin.azurewebsites.net/indonesianrugby/clubs/list.json').subscribe(data =>
-    this.json = data.json());
+  this.json = data.json());
   this.navi = nav;
   this.base64Images = navParams.get('base64');
   }
 
+/*
+Ambil data gambar dari page Teammate Photos (foto/ gallery) lalu upload ke targetURL
+*/
 uploadImg(){
   // Destination URL
-  var targetURL = 'https://ri-admin.azurewebsites.net/indonesianrugby/photos/upload.json';
+var targetURL = 'https://ri-admin.azurewebsites.net/indonesianrugby/photos/upload.json';
 
-  this.path= ''; // File path
+this.path= ''; // File path
 
 var headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'}); // interface
 var options = new RequestOptions({headers:headers});
@@ -44,25 +47,23 @@ this.loading= this.loadingCtrl.create({
 this.loading.present();
 this.ngAfterViewInit();
 this.dataURL = this.dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
-    var dat = 'userId=frameoo&photo=' + this.dataURL;
+    var dat = 'userId=frameRugby&photo=' + this.dataURL;
 
 this.http.post(targetURL, dat, options).subscribe(res => this.json = res.json());
 this.loading.dismissAll(); // Menghilangkan loading screen
 this.navigate();
 }
 
-navigate(){
-  this.navi.setRoot(TeamPhotos);
-}
+
 
 ngAfterViewInit(){ // Lifecycle hook that is called after a component's view has been fully initialized.
   let context: CanvasRenderingContext2D = this.myCanvas.nativeElement.getContext("2d");
   let base_image = new Image(); // Membuat image baru
-  let frameoo = new Image(); // membuat image baru yang nilainya akan diisi dengan frame dari folder asset/img
-  frameoo.src = this.frame;
+  let frameRugby = new Image(); // membuat image baru yang nilainya akan diisi dengan frame dari folder asset/img
+  frameRugby.src = this.frame;
   base_image.onload = function(){
     context.drawImage(base_image, 0, 0, 400, 400);
-    context.drawImage(frameoo, 0, 0);
+    context.drawImage(frameRugby, 0, 0);
   };
   base_image.src = this.base64Images;
   this.dataURL = this.myCanvas.nativeElement.toDataURL();
@@ -111,6 +112,11 @@ applyFrame(frame: string){
     this.frame = "assets/img/frame10.png";
     this.ngAfterViewInit();
   }
+}
+
+
+navigate(){
+  this.navi.setRoot(TeamPhotos);
 }
 
 }
